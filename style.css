@@ -1,0 +1,639 @@
+
+/*=========================================*/
+/*======= FONTS ===========================*/
+/*=========================================
+	1. font-family: 'Raleway', sans-serif;
+	*/
+	@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
+/*=========================================*/
+/*======= COLORS ==========================*/
+/*=========================================
+
+	1. Blue: #0065FC
+	2. Ligt Blue: #DEEBFF
+
+/*=========================================*/
+/*======= SUMARY ==========================*/
+/*=========================================
+
+	I. INDIVIDUAL
+		1_HEADER
+		2_BODY
+		3_FOOTER
+		
+   II. RESPONSIVE
+
+/************************/
+/*** 1_HEADER ***********/
+/************************/
+body{
+    margin: 0px;
+}
+section{
+    margin-bottom: 15px;;
+}
+p, a, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+}
+.oma_page_content{
+    padding: 25px;
+    margin: auto;
+    max-width: 1500px;
+}
+#oma_header{
+    padding-bottom: 45px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+.oma_logo, .oma_menu{
+    width: 50%;
+}
+.oma_menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+}
+.oma_menu  li > a {
+    text-decoration: none;
+    padding: 5px 30px;
+	font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+	color: #000;
+}
+.oma_menu li > a:hover{
+    color: #0065FC;
+}
+.oma_menu li{
+    position: relative;
+}
+.oma_menu li:before{
+    content: '';
+    display: none;
+    position: absolute;
+    background:#0065FC;
+    height: 3px;
+    top: -32px;
+    right: 0;
+    left: 0;
+}
+.oma_menu li:hover::before{
+    display: block;
+}
+.nav3{
+    font-weight: bold;
+    color: #0065FC!important;
+}
+.blurb_text h2, h6{
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+    padding-bottom: 15px;
+}
+/*input form*/
+form{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+     display: flex;
+}
+#oma_search_input{
+    max-width: 230px;
+    padding: 12px 15px !important;
+    border-color: #F2F2F2;
+    border-style: solid;
+}
+.search_btn{
+    font-family: 'Raleway', sans-serif ;
+    font-weight: 700 ;
+    border-width: 0px;
+    font-size: 18px;
+    margin-bottom: 0px ;
+    padding: 12px 15px;
+    background-color: 0065FC;
+    color: white;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.search_btn:hover{
+    color: 0065FC;
+    background-color: white;
+    cursor: pointer;
+
+}
+.fa-map-marker-alt {
+    padding: 15px;
+    background-color: F2F2F2;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+/*Filter box*/
+.oma_filters_box{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.oma_filter_container{
+    padding: 0px 30px;
+    width: 800px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+.oma_filter_container button{
+    margin-right: 45px;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+    background-color: white;
+    border-color: #F2F2F2;
+    border-style: solid;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    position: relative;
+    padding-left: 30px;
+    background: linear-gradient(to right, #0065FC 50%, white 50%);
+    background-size: 300% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+.btn:hover{
+    background-position: left bottom;
+    border-radius: none;
+}
+  .btn1:before {
+    content: "\f53a";
+    font-family: 'FontAwesome';
+     font-weight: 900; 
+     color: #0065FC;
+  }
+  .btn2:before {
+    content: "\f183";
+    font-family: 'FontAwesome';
+     font-weight: 900; 
+     color: #0065FC;
+  }
+  .btn3:before {
+    content: "\f004";
+    font-family: 'FontAwesome';
+     font-weight: 900; 
+     color: #0065FC;
+  }
+  .btn4:before {
+    content: "\f6d3";
+    font-family: 'FontAwesome';
+     font-weight: 900; 
+     color: #0065FC;
+  }
+  .btn:before{
+    background-color: #DEEBFF;
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -24px;
+    width: 45px;
+    line-height: 3;
+    border-radius: 50%;
+  }
+  .oma_info{
+      display:inline;
+  }
+  /*Acccommodation section*/
+  #oma_accommodation{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+  .oma_accommo1, .oma_accommo2{
+     background-color: #F2F2F2;
+     padding: 35px;
+    border-radius: 15px;
+  }
+
+  #oma_accommodation h1 {
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+    flex-basis: 100%;
+  }
+  .oma_accommo1 a:last-child{
+      flex-basis: 100%;
+  }
+ .oma_accommo1 .oma_house, .oma_accommo2 .oma_house {
+      background-color: white;
+      border-radius: 15px;
+      padding: 5px;
+      margin-bottom: 30px;
+      box-shadow: 0px 1px 14px -7px #000000;
+  }
+   a{
+      text-decoration: none;
+  }
+ .oma_accommo1 .oma_house1 .img_acc_container{
+      background-image: url("images/hebergements/4_small/house1.jpg");
+  }
+ .oma_accommo1 .oma_house2 .img_acc_container{
+    background-image: url("images/hebergements/4_small/house2.jpg");
+}
+.oma_accommo1 .oma_house3 .img_acc_container{
+    background-image: url("images/hebergements/4_small/house3.jpg");
+}
+.oma_accommo1 .oma_house4 .img_acc_container{
+    background-image: url("images/hebergements/4_small/house4.jpg");
+}
+.oma_accommo1 .oma_house5 .img_acc_container{
+    background-image: url("images/hebergements/4_small/house5.jpg");
+}
+.oma_accommo1 .oma_house6 .img_acc_container{
+    background-image: url("images/hebergements/4_small/house6.jpg");
+}
+.oma_accommo1 .img_acc_container{
+   width: 230px;
+    height: 116px;
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.oma_accommo1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-basis: 60%;
+}
+.oma_accommo1 .text_acc_container{
+    padding: 10px;
+}
+.text_acc_container h3, p{
+    margin: 5px;
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+    font-size: 16px;
+}
+.fa-star, .fa-info-circle{
+    color:#0065FC;
+}
+.oma_accommo1 .fa-star:nth-last-child(1), .oma_house4 .fa-star:nth-last-child(2){
+    color:#F2F2F2
+}
+.oma_accommo1 .oma_house2 .fa-star:nth-last-child(1), .oma_house5 .fa-star:nth-last-child(1) {
+    color:#0065FC;
+}
+/*accomo2*/
+.oma_header_title{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+}
+.oma_accommo2 .img_acc_container{
+    width: 126px;
+    height: 136px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.oma_accommo2 .oma_house1 .img_acc_container{
+    background-image: url("images/hebergements/4_small/house1.2.jpg");
+}
+.oma_accommo2 .oma_house2 .img_acc_container{
+    background-image: url("images/hebergements/4_small/house2.2.jpg");
+}
+.oma_accommo2 .oma_house3 .img_acc_container{
+    background-image: url("images/hebergements/4_small/house3.2.jpg");
+}
+.oma_accommo2 .oma_house {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row wrap;
+    width: 345px;
+}
+.oma_accommo2 .text_acc_container{
+    width: 50%;
+    padding: 15px;
+}
+.oma_accommo2 .oma_house2 .text_acc_container{
+    line-height: 1;  
+}
+.oma_accommo2 .oma_house2 .fa-star:nth-last-child(1), .oma_accommo2 .oma_house3 .fa-star:nth-last-child(1){
+    color:#F2F2F2 
+}
+/*Activities section*/
+#oma_activities h3{
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+    flex-basis: 100%;
+}
+#oma_activities .oma_house1 .img_acc_container{
+    background-image: url("images/activites/4_small/activi1.jpg");
+}
+#oma_activities .oma_house2 .img_acc_container{
+    background-image: url("images/activites/4_small/activi2.jpg");
+}
+#oma_activities .oma_house3 .img_acc_container{
+    background-image: url("images/activites/4_small/activi3.jpg");
+}
+#oma_activities .oma_house4 .img_acc_container{
+    background-image: url("images/activites/4_small/activi4.jpg");
+}
+#oma_activities .oma_house5 .img_acc_container{
+    background-image: url("images/activites/4_small/activi5.jpg");
+}
+#oma_activities .oma_house6 .img_acc_container{
+    background-image: url("images/activites/4_small/activi6.jpg");
+}
+#oma_activities  .img_acc_container{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#oma_activities{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+#oma_activities .img_acc_container{
+    width: 300px;
+}
+#oma_activities .oma_house1 .img_acc_container, #oma_activities .oma_house4 .img_acc_container {
+    height: 390px;
+}
+#oma_activities .oma_house2 .img_acc_container {
+    height: 177px;
+}
+#oma_activities .oma_house3 .img_acc_container{
+    height: 112px;
+}
+#oma_activities .oma_house5 .img_acc_container{
+    height: 135px;
+}
+#oma_activities .oma_house6 .img_acc_container{
+    height: 150px;
+}
+#oma_activities .text_acc_container p{
+    font-weight: bold;
+    padding: 20px;
+}
+#oma_activities .text_acc_container{
+    background-color: white;
+}
+#oma_activities .oma_house{
+ box-shadow: 0px 1px 14px -7px #000000;
+ border-radius: 15px;
+ overflow: hidden;
+}
+.oma_acctivi_column{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*footer section*/
+#oma_footer {
+    background-color: #f2f2f2;
+    margin: 0;
+}
+.oma_footer_column{
+    display: inline-block;
+}
+.oma_footer_column h2{
+    margin: 0;
+    margin-bottom: 15px;
+}
+.oma_footer_column a{
+    line-height: 2;
+}
+.oma_footer_container{
+    margin: 0 auto;
+    padding: 50px 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 200px;
+}
+/*responsive*/
+@media screen and (max-width: 1280px){
+    #oma_accommodation{
+        justify-content: space-around;
+    }
+    .oma_accommo1{
+        margin-bottom: 15px;
+    }
+    .oma_accommo1, .oma_accommo2{
+        flex-basis: 100%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    #oma_activities{
+        justify-content: space-around;    
+        margin: 30px 0;
+    }
+    #oma_activities .oma_house{
+        margin-bottom: 10px;
+    } 
+    #oma_activities .oma_acctivi_column{
+        justify-content: inherit;
+    }
+}
+@media screen and (max-width: 1080px){
+    .oma_footer_container{
+        padding: 30px;
+        gap: 20%;
+    }
+    .oma_accommo1, .oma_accommo2{
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 730px){ 
+    .oma_menu li::before{
+        bottom: -10px;
+        top: auto;
+    }
+    #oma_header, #oma_activities{
+        padding-bottom: 0 !important;
+        flex-direction: column !important;
+    }
+    .oma_logo, .oma_menu {
+        width: auto;
+        justify-content: center;
+    }
+    .blurb_text h2 {
+        font-size: 15px;
+    }
+    .oma_filter_container{
+        justify-content: left;
+        gap: 5px;
+    }
+    #oma_search form{
+        margin-bottom: 5px;;
+    }
+    .oma_accommo1{
+        flex-flow: column wrap;
+    }
+    .oma_house {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+    .oma_accommo1 .img_acc_container, .text_acc_container {
+        max-width: 325px;
+        width: auto;
+    }
+    #oma_activities .img_acc_container{
+        max-width: 330px;
+        width: auto;
+    }
+    #oma_activities .oma_house .img_acc_container{
+        height: 135px !important;
+    }
+    .oma_accommo1 h1, .oma_accommo1 a:last-child{
+        flex: 1;
+        flex-basis: auto!important;
+    }
+    #oma_accommodation .oma_accommo1{
+        background-color: white;
+        order: 1;
+    }
+}
+@media screen and (max-width: 480px){ 
+    .oma_page_content{
+        padding: 0;
+    }
+    .oma_logo, #oma_search, .oma_accommo1, .oma_accommo2{
+       padding: 15px;
+    }
+    #oma_activities h3{
+        margin-top: 0;
+        padding: 0 15px;
+    }
+    .oma_footer_column h2 {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+    .oma_footer_column a{
+        line-height: 1.5;
+    }
+    .oma_footer_container{
+        flex-flow: column wrap;
+        gap: 20px;
+    }
+    .oma_menu{
+        gap: 15px;
+    }
+    .oma_menu li > a {
+        font-size: 15px;
+        padding: 5px 15px;
+    }
+    .oma_info{
+        font-size: 12px;
+    }
+    #oma_accommodation h1, .oma_accommo2 h1, #oma_activities h3 {
+        font-size: 18px;
+    }  
+}
+@media screen and (max-width: 380px){
+    #oma_accommodation h1, .oma_accommo2 h1, #oma_activities h3, .text_acc_container h3, .oma_show_more_btn, .oma_footer_column h3{
+        font-size: 15px;
+    } 
+    .text_acc_container p, .oma_footer_column a{
+        font-size: 12px;
+    }
+    .oma_accommo1{
+        margin-bottom: 0;
+    }
+    #oma_activities .text_acc_container p{
+        padding: 10px;
+    }
+ }
+ @media screen and (max-width: 350px){
+    .oma_accommo2 .img_acc_container {
+        width: 120px;
+    }
+    .oma_accommo2 .text_acc_container {
+        width: 40%;
+    }
+    .oma_accommo2 .oma_house{
+        width: auto;
+        max-width: 345px;
+    }
+    .oma_house{
+        max-width: 300px;
+    }
+    #oma_search_input{
+        max-width: 130px;
+    }
+ }
+ @media screen and (max-width: 280px){
+    .oma_house{
+        max-width: 250px;
+    }
+    .oma_most_popular .oma_house {
+        flex-flow: column wrap;
+    }
+    .oma_accommo2 .oma_house .img_acc_container, .oma_accommo2 .oma_house .text_acc_container{
+        width: 100%;
+    }
+    .oma_accommo2 .oma_house .img_acc_container{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+    }
+
+ }
+
+
+
+
+
